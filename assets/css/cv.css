@@ -1,0 +1,40 @@
+#cv-header{
+	background-image: url('../img/latarputih.png');
+	border-bottom:solid 1px #ccc;
+	
+	margin-bottom:2rem;
+}
+
+#cv-container
+{
+	margin-top:0rem;
+	padding-top:0rem;
+}
+
+#cv-title
+{
+	padding-top:2rem;
+}
+
+#cv-pict
+{
+	margin-bottom:-0.5rem;
+}
+
+#cv-form
+{
+}
+
+@media screen and (max-width: 992px) {
+    #cv-pict img
+	{
+		width:70%;
+	}
+}
+
+@media screen and (max-width: 992px) {
+    h1
+	{
+		font-size:3rem;
+	}
+}
