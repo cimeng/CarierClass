@@ -1,0 +1,47 @@
+.blog-img{
+}
+
+.blog-img > img{
+	width:100%;
+	height:170px;
+	object-fit:cover;
+	
+}
+
+.blog-title > a{
+	color:black;
+}
+
+.blog-container
+{
+	margin-bottom:30px;
+}
+
+.blog-numbering
+{
+	text-align:center;
+}
+
+.pagination li.active
+{
+	background-color:orange;
+}
+
+.pagination li
+{
+	background-color:#ccc;
+}
+
+.pagination li > a
+{
+	color:white;
+}
+
+#blog-page-container
+{
+	margin-bottom:50px;
+}
+
+#post-header{
+	margin-bottom:50px;
+}
