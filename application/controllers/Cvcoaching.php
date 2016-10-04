@@ -20,6 +20,7 @@ class Cvcoaching extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->library('session');
 		$data['header']=$this->load->view('parts/header','',true);
 		$data['navbar']=$this->load->view('parts/navbar','',true);
 		$data['footer']=$this->load->view('parts/footer','',true);
@@ -87,12 +88,15 @@ class Cvcoaching extends CI_Controller {
 		for($i=0; $i<$cpt; $i++)
 		{
 			$this->email->attach($img_cv[$i]);
-			echo $img_cv[$i].'<br>';
+			//echo $img_cv[$i].'<br>';
 		}
 		$this->email->subject('Email Test');
 		$this->email->message('Testing the email class.');
 
-		$this->email->send();
+		if($this->email->send()){
+			$this->session->set_flashdata('message', 'File Kamu Telah Terkirim');
+			redirect('cvcoaching#cv-form');
+		}
 	}
 	
 	private function set_upload_options($slug,$i)
@@ -112,7 +116,7 @@ class Cvcoaching extends CI_Controller {
 		$new_name.= $ext;
 		
 		$config['file_name'] = $new_name;
-		echo $new_name.'<br>';
+		//echo $new_name.'<br>';
 		return $config;
 	}
 	

@@ -23,36 +23,43 @@
 		</h5>
 	</div>
 	<div id ="cv-form" class="container row">
+		<?php if($this->session->flashdata('message')!=NULL){ ?>
+		<div class="row">
+			<div class="col s12 m12 l12 blue darken-4 white-text">
+				  <h5><i class="small material-icons">done</i> <?php echo $this->session->flashdata('message') ?></h5>
+			</div>
+		</div>
+		<?php } ?>
 		 <div class="row">
 			<?php echo form_open_multipart('cvcoaching/getData');?>
 			<div class="row">
 				<div class="input-field col s12">
-				  <input id="first_name" name ="name" type="text" class="validate">
-				  <label for="first_name">Name</label>
+				  <input id="name" name ="name" type="text" class="validate" required="" aria-required="true">
+				  <label for="name" data-error="wrong" data-success="right">Name</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
-				  <input id="first_name" type="email" class="validate">
-				  <label for="first_name">Email</label>
+				  <input id="Email" name ="email" type="email" class="validate" class="validate" required="" aria-required="true">
+				  <label for="Email" data-error="wrong" data-success="right">Email</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
-				  <input id="first_name" type="text" class="validate">
-				  <label for="first_name">University</label>
+				  <input id="University" name ="univ" type="text" class="validate" required="" aria-required="true">
+				  <label for="University" data-error="wrong" data-success="right">University</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
-				  <input id="first_name" type="text" class="validate">
-				  <label for="first_name">Major</label>
+				  <input id="Major" name ="major" type="text" class="validate" required="" aria-required="true">
+				  <label for="Major" data-error="wrong" data-success="right">Major</label>
 				</div>
 			</div>
 			<div class="file-field input-field">
 				<div class="btn blue darken-4">
 					<span>CV</span>
-					<input type="file" class="" name="userfile[]" id="userfile" multiple>
+					<input type="file" class="" name="userfile[]" id="userfile" required="" aria-required="true" multiple>
 				</div>
 				<div class="file-path-wrapper">
 					<input class="file-path validate " type="text" placeholder="Upload your CV">
@@ -67,6 +74,7 @@
 		  </div>
 	</div>
 </div>
+
 
 	<?php echo $footer ?>
 	
