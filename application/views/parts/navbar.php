@@ -1,12 +1,72 @@
-<nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
+<div class="navbar-fixed" style="position:absolute; top:0;">
+	<nav>
+		<div class="nav-wrapper white">
+			<div class="row">
+				<div class="col l1 m1 s2"></div>
+				<div  class="brand-logo col l1 m2 s3">
+					<a href="<?php echo base_url();?>">
+						<img  style="margin-top:7%;" width="130%" src="<?php echo base_url();?>assets/img/logo_samping.png">
+					</a>
+				</div>
+				<div class="col l5 m2 s2"></div>
+				<div class="col l5 m8 hide-on-small-only">
+					<div class="row">
+						<div class="col l2 m2 s2 center">
+							<a href="#1" class=" black-text">about</a>
+						</div>
+						<div class="col l2 m2 s2 center">
+							<a href="#2" class=" black-text">story</a>
+						</div>
+						<div class="col l2 m2 s2 center">
+							<a href="#3" class=" black-text">chat</a>
+						</div>
+						<div class="col l2 m2 s2 center">
+							<a href="#4" class=" black-text">coaching</a>
+						</div>
+						<div class="col l2 m2 s2 center">
+							<a href="#5" class=" black-text">class</a>
+						</div>
+						<div class="col l2 m2 s2 center">
+							<a href="#6" class=" black-text">contact</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s3"></div>
+				<div class="col s2 right hide-on-large-only hide-on-med-only">
+					<!-- Dropdown Trigger -->
+				
+					<a class='dropdown-button' href='#' data-activates='dropdown1'>
+					<i class="material-icons md-dark left	"  style="margin-top:5%">list</i>
+					</a>
+					<!-- Dropdown Structure -->
+					<ul id='dropdown1' class='dropdown-content'>
+					  <li><a href="#1">about</a></li>
+					  <li class="divider"></li>
+					  <li><a href="#2">story</a></li>
+					  <li class="divider"></li>
+					  <li><a href="#3">chat</a></li>
+					  <li class="divider"></li>
+					  <li><a href="#4">coaching</a></li>
+					  <li class="divider"></li>
+					  <li><a href="#5">class</a></li>
+					  <li class="divider"></li>
+					  <li><a href="#6">contact</a></li>
+					</ul>
 
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+					<script type="text/javascript">
+						$('.dropdown-button').dropdown({
+						    inDuration: 300,
+						    outDuration: 225,
+						    constrain_width: false, // Does not change width of dropdown to that of the activator
+						    hover: true, // Activate on hover
+						    gutter: 0, // Spacing from edge
+						    belowOrigin: true, // Displays dropdown below the button
+						    alignment:'left' // Displays dropdown with edge aligned to the left of button
+						});
+					</script>
+				</div>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
