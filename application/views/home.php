@@ -1,54 +1,38 @@
 <!DOCTYPE html>
   <html>
-    <style type="text/css">
-      @font-face {
-        font-family: "alpaca";
-        src: url("../fonts/Alpaca.otf");
-
-        font-family: "sourceSans";
-        src: url("../fonts/SourceSans.otf");
-    </style>
     <head>
       <?php echo $header;?>
+	<link href="<?php echo base_url()?>assets/css/index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
 
     <body>
       <?php echo $navbar;?>
-      <!-- <div class="row" style="background-image:url('<?php echo base_url();?>assets/img/latar_oren.png'); background-size:cover;">
-        <div class="col l1 m1 s1"></div>
-        <div class="col l5 m5 s5" style="padding-bottom:0px;">
-          <img style="margin-bottom:0px;" width="100%" src="<?php echo base_url();?>assets/img/orang-2.png">
-        </div>
-        <div class="col l6 m6 s6">
-          <div class="alpaca" style="font-size:100px; font-family:alpaca;">Persiapkan Masa Depan</div>
-        </div>
-      </div> -->
-
+    
       <div>
         <img src="<?php echo base_url();?>assets/img/bann_pertama.png" width="100%">
       </div>
       <div class="container center">
         <div class="container">
-          <h3><span class="alpaca" ">career</span><span class="">class</span><span class="">.id</span></h3>
+          <h3><span class="header orange-text">career</span><span class="header purple-text">class</span><span class="header orange-text">.id</span></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Nullam consectetur augue vitae dui imperdiet vestibulum vitae at erat. Morbi nec dolor vel neque consectetur porta at quis massa. Duis accumsan dictum nisl, sed efficitur nibh maximus id. </p>
         </div>
         <div class="row" style="margin-top:4%;">
           <div class="col l3 m4 s6">
             <img src="<?php echo base_url();?>assets/img/ungu_kotak.png" width="100%" style="padding-right:5%; padding-left:5%;">
-            <div>Career Story</div>
+            <div class="header">Career Story</div>
           </div>
           <div class="col l3 m4 s6">
             <img src="<?php echo base_url();?>assets/img/oren_kotak.png" width="100%" style="padding-right:5%; padding-left:5%;">
-            <div>Career Chat</div>
+            <div class="header">Career Chat</div>
           </div>
           <div class="col l3 m4 s6">
             <img src="<?php echo base_url();?>assets/img/ungu_kotak.png" width="100%" style="padding-right:5%; padding-left:5%;">
-            <div>Career Coaching</div>
+            <div class="header">Career Coaching</div>
           </div>
           <div class="col l3 m4 s6">
             <img src="<?php echo base_url();?>assets/img/oren_kotak.png" width="100%" style="padding-right:5%; padding-left:5%;">
-              <div>Career Class</div>
-              <span>with</span>
+              <div class="header">Career Class</div>
+              <span  class="header">with</span>
               <img src="<?php echo base_url();?>assets/img/cimb.png" width="40%">
           </div>
         </div>
@@ -58,7 +42,7 @@
 
       <div class="container center">
         <div class="container">
-          <h2>Career Story</h2>
+          <h2  class="header">Career Story</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum.Ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero.</p>
         </div>
         <div class="row">
@@ -68,8 +52,7 @@
             <div>
               <div><img src="<?php echo base_url();?>assets/img/orang.png" width="100%"></div>
               <p style="text-align:left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero.</p>
-              <p style="text-align:left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero.</p>
-            </div>
+               </div>
           </div>
           <?php
              } ?>

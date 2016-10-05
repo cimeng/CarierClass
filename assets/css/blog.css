@@ -12,6 +12,11 @@
 	color:black;
 }
 
+#blog-page-container
+{
+	padding-top:70px;
+}
+
 .blog-container
 {
 	margin-bottom:30px;

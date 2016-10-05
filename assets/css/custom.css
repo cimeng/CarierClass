@@ -71,3 +71,27 @@ div.relative {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+@font-face {
+  font-family: 'Alpaca';
+  src: url('../fonts/Alpaca.eot'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'Source Sans';
+  src: url('../fonts/SourceSansPro-Regular.eot'); /* IE9 Compat Modes */
+}
+
+ html {
+    font-family: "Source Sans", Roboto, sans-serif;
+  }
+  
+.header{
+	font-family: "Alpaca", Roboto, sans-serif;
+}
+
+  
+  nav {
+	  line-height:75px;
+  }

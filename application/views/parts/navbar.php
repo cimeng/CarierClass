@@ -3,31 +3,31 @@
 		<div class="nav-wrapper white">
 			<div class="row">
 				<div class="col l1 m1 s2"></div>
-				<div  class="brand-logo col l1 m2 s3">
+				<div  class="brand-logo col l2 m3 s5">
 					<a href="<?php echo base_url();?>">
-						<img  style="margin-top:7%;" width="130%" src="<?php echo base_url();?>assets/img/logo_samping.png">
+						<img  style="margin-top:5px;margin-left:30px" width="100%" src="<?php echo base_url();?>assets/img/logo_samping.png">
 					</a>
 				</div>
 				<div class="col l5 m2 s2"></div>
 				<div class="col l5 m8 hide-on-small-only">
-					<div class="row">
+					<div class="row header">
 						<div class="col l2 m2 s2 center">
-							<a href="#1" class=" black-text">about</a>
+							<a href="#1" class=" orange-text">about</a>
 						</div>
 						<div class="col l2 m2 s2 center">
-							<a href="#2" class=" black-text">story</a>
+							<a href="#2" class=" orange-text">story</a>
 						</div>
 						<div class="col l2 m2 s2 center">
-							<a href="#3" class=" black-text">chat</a>
+							<a href="#3" class=" orange-text">chat</a>
 						</div>
 						<div class="col l2 m2 s2 center">
-							<a href="#4" class=" black-text">coaching</a>
+							<a href="#4" class=" orange-text">coaching</a>
 						</div>
 						<div class="col l2 m2 s2 center">
-							<a href="#5" class=" black-text">class</a>
+							<a href="#5" class=" orange-text">class</a>
 						</div>
 						<div class="col l2 m2 s2 center">
-							<a href="#6" class=" black-text">contact</a>
+							<a href="#6" class=" orange-text">contact</a>
 						</div>
 					</div>
 				</div>

@@ -1,9 +1,11 @@
-<footer class="page-footer" style="max-height:60px">
-  <div class="row  center" style="margin-bottom:0;">
-    <div class="col l1 m2 s3">
-      <a href="<?php echo base_url();?>">
-          <img  style="margin-top:7%;" width="130%" src="<?php echo base_url();?>assets/img/logo_putih.png">
-      </a>
+<footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <img src="<?php echo base_url()?>assets/img/logo_putih.png" style="width:20%">
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+    <div class="footer-copyright" style="height:0">
+    </div>
+  </footer>

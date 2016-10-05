@@ -3,6 +3,7 @@
 <head>
    <title>Starter Template - Materialize</title>
 	<?php echo $header ?>
+	<link href="<?php echo base_url()?>assets/css/index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 

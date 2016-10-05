@@ -12,7 +12,7 @@
 <div class="section no-pad-bot" id="cv-container">
 	<div id="cv-header">
 		<div id="cv-title">
-			<h1 class="header center black-text">CV Coaching</h1>
+			<h1 class="header center black-text header">CV Coaching</h1>
 		</div>
 		<div id="cv-pict" class="row center">
 			<img src="<?php echo base_url() ?>assets/img/Orang.png" >
