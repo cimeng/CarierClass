@@ -1,5 +1,19 @@
-body {
-  margin: 0, 0, 0, 0;
+.table-of-contents li {
+  padding: 0;
+}
+
+.table-of-contents a.active {
+  border-left: 0px;
+  font-weight: 500;
+  background-color: rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.table-of-contents a:hover {
+  font-weight: 500;
+  border-left: 0 solid #ea4a4f;
+  background-color: rgba(0,0,0,0.3);
+  text-align: center;
 }
 
 @font-face {
@@ -11,7 +25,7 @@ body {
 }
 
 footer.page-footer {
-  margin-top: 20px;
+  margin-top: 4%;
   padding-top: 20px;
   background-color: #282828;
   margin-bottom: 0px;
@@ -23,13 +37,6 @@ footer.page-footer {
 
 .sourcesans {
   font-family: sourceSans;
-}
-
-nav{
-  background-color:#333; 
-  width: 100%; 
-  height: 70px; 
-  line-height: 56px;
 }
 
 div.absolute {
@@ -57,22 +64,6 @@ div.relative {
 .material-icons.md-dark { color: rgba(251, 81, 21, 0.74); }
 .material-icons.md-dark.md-inactive { color: rgba(251, 81, 21, 0.26); }
 
-@media only screen and (max-width: 601px) {
-  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-    height: 50px;
-    line-height: 50px;
-  }
-  .navbar-fixed {
-    height: 50px;
-  }
-}
-
-.row {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
 @font-face {
   font-family: 'Alpaca';
   src: url('../fonts/Alpaca.eot'); /* IE9 Compat Modes */
@@ -91,7 +82,42 @@ div.relative {
 	font-family: "Alpaca", Roboto, sans-serif;
 }
 
-  
-  nav {
-	  line-height:75px;
+
+
+@media only screen and (max-width: 600px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+      height: 50px;
+      line-height: 50px;
+    }
+    .navbar-fixed {
+      height: 50px;
+    }
+
+    nav .brand-logo{
+    position: absolute;
+    color: #fff;
+    height: 85%;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
   }
+}
+
+@media only screen and (max-width: 600px) {
+
+   h3 { font-size: 3em; }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 991px){
+
+   h3 { font-size: 5em; }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+   h3 { font-size: 7em; }
+
+}

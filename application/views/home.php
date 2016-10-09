@@ -11,25 +11,25 @@
       <div>
         <img src="<?php echo base_url();?>assets/img/bann_pertama.png" width="100%">
       </div>
-      <div class="container center">
+      <div id="about" class="container center section scrollspy">
         <div class="container">
           <h3><span class="header orange-text">career</span><span class="header purple-text">class</span><span class="header orange-text">.id</span></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Nullam consectetur augue vitae dui imperdiet vestibulum vitae at erat. Morbi nec dolor vel neque consectetur porta at quis massa. Duis accumsan dictum nisl, sed efficitur nibh maximus id. </p>
         </div>
         <div class="row" style="margin-top:4%;">
-          <div class="col l3 m4 s6">
+          <div class="col l3 m3 s6">
             <img src="<?php echo base_url();?>assets/img/ungu_kotak.png" width="100%" style="padding-right:5%; padding-left:5%;">
             <div class="header">Career Story</div>
           </div>
-          <div class="col l3 m4 s6">
+          <div class="col l3 m3 s6">
             <img src="<?php echo base_url();?>assets/img/oren_kotak.png" width="100%" style="padding-right:5%; padding-left:5%;">
             <div class="header">Career Chat</div>
           </div>
-          <div class="col l3 m4 s6">
+          <div class="col l3 m3 s6">
             <img src="<?php echo base_url();?>assets/img/ungu_kotak.png" width="100%" style="padding-right:5%; padding-left:5%;">
             <div class="header">Career Coaching</div>
           </div>
-          <div class="col l3 m4 s6">
+          <div class="col l3 m3 s6">
             <img src="<?php echo base_url();?>assets/img/oren_kotak.png" width="100%" style="padding-right:5%; padding-left:5%;">
               <div class="header">Career Class</div>
               <span  class="header">with</span>
@@ -40,7 +40,7 @@
 
       <div class="divider"></div>
 
-      <div class="container center">
+      <div id="story" class="container center  section scrollspy">
         <div class="container">
           <h2  class="header">Career Story</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum.Ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero.</p>
@@ -52,17 +52,17 @@
             <div>
               <div><img src="<?php echo base_url();?>assets/img/orang.png" width="100%"></div>
               <p style="text-align:left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero.</p>
-               </div>
+            </div>
           </div>
           <?php
              } ?>
         </div>
         <div>
-          <a class="waves-effect waves-light btn" style="background-color:#8d3c98;">artikel lainnya</a>
+          <a class="waves-effect waves-light btn-large" style="background-color:#fbb515;">artikel lainnya</a>
         </div>
       </div>  
-      <div style=" margin-top:3%; margin-bottom:0px;" class="relative">  
-        <div class="absolute" style="z-index:2; left:51%; top:80%;">
+      <div id="chat" style=" margin-top:3%; margin-bottom:0px;" class="relative section scrollspy">  
+        <div class="absolute" style="z-index:2; left:51%; top:73%;">
           <a class="waves-effect waves-light btn-large" style="background-color:#fbb515;">artikel lainnya</a>
         </div>     
         <div>
@@ -70,8 +70,8 @@
         </div>
       </div>
 
-      <div style=" margin-top:0px;" class="relative">  
-        <div class="absolute" style="z-index:2; left:51%; top:80%;">
+      <div id="coaching" style=" margin-top:0px;" class="relative  section scrollspy">  
+        <div class="absolute" style="z-index:2; left:51%; top:72%;">
           <a class="waves-effect waves-light btn-large" style="background-color:#8d3c98;">artikel lainnya</a>
         </div>     
         <div>
@@ -79,17 +79,21 @@
         </div>
       </div>
 
-      <div style=" margin-top:0px;" class="relative">  
-        <div class="absolute" style="z-index:2; left:8.5%; top:43%; right:50%">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. </p>
-          <a class="waves-effect waves-light btn-large" style="background-color:#fbb515;">artikel lainnya</a>
+      <div id="class" style=" margin-top:0px; " class="relative  section scrollspy"> 
+        <div class="absolute" style="z-index:2; left:8.5%; top:43%; right:50%; overflow:hidden;">
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. </p>
+          </div>
+          <div>
+            <a class="waves-effect waves-light btn-large" style="background-color:#fbb515;">artikel lainnya</a>
+          </div>
         </div>     
         <div>
           <img src="<?php echo base_url();?>assets/img/ngomong.png" width="100%">
         </div>
       </div>
 
-      <div class="container center">
+      <div id="contact" class="container center section scrollspy">
         <h3>
           Contact
         </h3>
