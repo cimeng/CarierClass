@@ -10,32 +10,32 @@
 			<div class="col l4 m2 s2"></div>
 			<div class="col l5 m8 hide-on-small-only   hide-on-med-only">
 				<ul class="row header section table-of-contents" style="margin-top:0; padding-top:0;">
-					<a href="#about" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:24px;">
+					<a href="#about" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:1em;">
 							<div style="color: #fbb515;">
 								about
 							</div>
 					</a>
-					<a href="#story" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:24px;">
+					<a href="<?php echo base_url()?>blog" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:1em;">
 							<div style="color: #fbb515; margin-left:0;">
 								story
 							</div>
 					</a>
-					<a href="#chat" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:24px;">
+					<a href="#chat" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:1em;">
 							<div style="color: #fbb515;">
 								chat
 							</div>
 					</a>
-					<a href="#coaching" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:24px;">
+					<a id="coaching" href="<?php echo base_url()?>cvcoaching" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:1em;">
 							<div style="color: #fbb515;">
 								coaching
 							</div>
 					</a>
-					<a href="#class" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:24px;">
+					<a href="#class" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:1em;">
 							<div style="color: #fbb515;">
 								class
 							</div>
 					</a>
-					<a href="#contact" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:24px;">
+					<a href="#contact" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:1em;">
 							<div style="color: #fbb515;">
 								contact
 							</div>

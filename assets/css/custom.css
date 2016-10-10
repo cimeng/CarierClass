@@ -1,3 +1,25 @@
+#section-1{
+	margin-top:64px;
+}
+
+.footer-img 
+{
+	width:20%;
+}
+
+.blog h3{
+  position: absolute;
+  font-size: 80px;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  font-weight: 1000;
+}
+
+* { box-sizing: border-box; }
+
+
+
 .table-of-contents li {
   padding: 0;
 }
@@ -61,6 +83,9 @@ div.relative {
   -webkit-tap-highlight-color: transparent;
 }
 
+
+
+
 .material-icons.md-dark { color: rgba(251, 81, 21, 0.74); }
 .material-icons.md-dark.md-inactive { color: rgba(251, 81, 21, 0.26); }
 
@@ -102,6 +127,31 @@ div.relative {
     padding: 0;
     white-space: nowrap;
   }
+  
+  .btn, .btn-large,
+.btn-flat {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  outline: 0;
+  padding: 0 0.5rem;
+  font-size:0.8em;
+  text-transform: none;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#section-1{
+	margin-top:50px;
+}
+
+.footer-img 
+{
+	width:50%;
+}
+
 }
 
 @media only screen and (max-width: 600px) {

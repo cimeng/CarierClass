@@ -18,11 +18,26 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	 
+	 
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('BlogModel');
+	}
+
+	
 	public function index()
 	{
 		$data['header']=$this->load->view('parts/header','',true);
 		$data['navbar']=$this->load->view('parts/navbar','',true);
 		$data['footer']=$this->load->view('parts/footer','',true);
+		
+		$limit = 4 ;
+		$offset = 0;
+		$data['post'] = $this->BlogModel->getBlogPosts($limit,$offset);
+		
 		$this->load->view('home', $data);
 	}
 }

@@ -17,8 +17,7 @@ class PostModel extends CI_Model
 			title_slug = '".$data['title_slug']."',
 			content = '".$data['content']."',
 			content_text = '".$data['content_text']."',
-			img = '".$data['img']."',
-			banner_show = ".$data['banner']."
+			img = '".$data['img']."'
 			WHERE id = ".$data['id']."
 		");
 		return 1;
@@ -27,9 +26,9 @@ class PostModel extends CI_Model
 	public function addPost($data)
 	{
 		$change = $this->db->query
-		("INSERT IGNORE INTO post (title,title_slug,content,content_text,img,banner_show) 
+		("INSERT IGNORE INTO post (title,title_slug,content,content_text,img) 
 		VALUES ('".$data['title']."','".$data['title_slug']."','".$data['content']."','".$data['content_text']."',
-		'".$data['img']."',".$data['banner'].")");
+		'".$data['img']."')");
 		return 1;
 	}
 	

@@ -38,7 +38,6 @@
 						  
 							  <th data-field="id">ID</th>
 							  <th data-field="id">Title</th>
-							  <th data-field="id">Headline</th>
 							  <th data-field="price">Action</th>
 						  </tr>
 						</thead>
@@ -51,15 +50,6 @@
 						  <tr>
 							<td><?php echo $data->id ?></td>
 							<td><?php echo $data->title ?></td>
-							<td>
-							<?php 
-								if($data->banner_show == 1)
-								echo '<i class=" small material-icons">done</i>';
-								else
-								echo '<i class=" small material-icons">clear</i>';
-							?>
-							
-							</td>
 							<td>
 								<a href="<?php echo base_url()?>adminpage/post_editor/<?php echo $data->id?>" class="btn-floating red"><i class="material-icons">mode_edit</i></a>
 								<a href="<?php echo base_url()?>adminpage/deletePost/<?php echo $data->id?>" class="btn-floating red" onclick="return confirm('Are you sure you want to delete this item?')"><i class="material-icons">delete</i></a>

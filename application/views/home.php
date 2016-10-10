@@ -8,7 +8,7 @@
     <body>
       <?php echo $navbar;?>
     
-      <div>
+      <div id="section-1">
         <img src="<?php echo base_url();?>assets/img/bann_pertama.png" width="100%">
       </div>
       <div id="about" class="container center section scrollspy">
@@ -47,18 +47,19 @@
         </div>
         <div class="row">
           
-          <?php $x=0; for ($x=0; $x < 4; $x++) { ?>
+          <?php foreach ($post as $data) { ?>
           <div class="col s6 m3 l3 left" >
             <div>
-              <div><img src="<?php echo base_url();?>assets/img/orang.png" width="100%"></div>
-              <p style="text-align:left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero.</p>
-            </div>
+              <div><img src="<?php echo base_url();?>assets/img/post/<?php echo $data->img?>" width="100%"></div>
+			  <div style="font-size:1.2em;font-weight:bold"><?php echo $data->title ?></div>
+              <p style="text-align:center"><?php echo $data->content_text ?></p>
+			</div>
           </div>
           <?php
              } ?>
         </div>
         <div>
-          <a class="waves-effect waves-light btn-large" style="background-color:#fbb515;">artikel lainnya</a>
+          <a href="<?php echo base_url()?>blog" class="waves-effect waves-light btn-large" style="background-color:#fbb515;">artikel lainnya</a>
         </div>
       </div>  
       <div id="chat" style=" margin-top:3%; margin-bottom:0px;" class="relative section scrollspy">  
@@ -72,7 +73,7 @@
 
       <div id="coaching" style=" margin-top:0px;" class="relative  section scrollspy">  
         <div class="absolute" style="z-index:2; left:51%; top:72%;">
-          <a class="waves-effect waves-light btn-large" style="background-color:#8d3c98;">artikel lainnya</a>
+          <a href="<?php echo base_url()?>cvcoaching" class="waves-effect waves-light btn-large" style="background-color:#8d3c98;">artikel lainnya</a>
         </div>     
         <div>
           <img src="<?php echo base_url();?>assets/img/putihmeja.png" width="100%">
@@ -82,7 +83,7 @@
       <div id="class" style=" margin-top:0px; " class="relative  section scrollspy"> 
         <div class="absolute" style="z-index:2; left:8.5%; top:43%; right:50%; overflow:hidden;">
           <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. </p>
+            <p style="font-size:1.2vw; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ipsum ultrices justo malesuada consequat et id velit. Proin ex nulla, pellentesque et finibus in, vehicula vitae libero. </p>
           </div>
           <div>
             <a class="waves-effect waves-light btn-large" style="background-color:#fbb515;">artikel lainnya</a>
@@ -95,58 +96,68 @@
 
       <div id="contact" class="container center section scrollspy">
         <h3>
-          Contact
+          <div class="header">Contact</div>
         </h3>
         <div class="row" style="margin-top:3%;">
-          <div class="col l2 m3 s5">
-            <a href="#fb"><div class="row">
-              <div class="col l4 m3 s4">
-                <img src="<?php echo base_url();?>assets/img/facebook.png" width="100%">
-              </div>
-              <div class="col l8 m9 s8 left-align black-text" style="padding-top:8%;">
-                CareerClass
-              </div>
+          <div class="col l2 m3 s12">
+            <a href="#fb"><div class="row" style="margin-top:-20px;">
+				<div class="col 12 m12 s6">
+				  <div class="col 12 m6 s4">
+					<img src="<?php echo base_url();?>assets/img/facebook.png" width="100%">
+				  </div>
+				  <div class="col 12 m6 s8 left-align black-text" style="padding-top:8%;">
+					CareerClass
+				  </div>
+				</div>
             </div></a>
-            <a href="#tw"><div class="row">
-              <div class="col l4 m3 s4">
-                <img src="<?php echo base_url();?>assets/img/twitter.png" width="100%">
-              </div>
-              <div class="col l8 m9 s8 left-align black-text" style="padding-top:7%;">
-                @CareerClass.id
-              </div>
+            <a href="#tw"><div class="row" style="margin-top:-20px;">
+				<div class="col 12 m12 s6">
+				  <div class="col 12 m6 s4">
+					<img src="<?php echo base_url();?>assets/img/twitter.png" width="100%">
+				  </div>
+				  <div class="col 12 m6 s8 left-align black-text" style="padding-top:7%;">
+					@CareerClass.id
+				  </div>
+				</div>
             </div></a>
-            <a href="#ig"><div class="row">
-              <div class="col l4 m3 s4">
-                <img src="<?php echo base_url();?>assets/img/instagram.png" width="100%">
-              </div>
-              <div class="col l8 m9 s8 left-align black-text" style="padding-top:7%;">
-                @CareerClass.id
-              </div>
+            <a href="#ig"><div class="row" style="margin-top:-20px;">
+				<div class="col 12 m12 s6">
+				  <div class="col 12 m6 s4">
+					<img src="<?php echo base_url();?>assets/img/instagram.png" width="100%">
+				  </div>
+				  <div class="col 12 m6 s8 left-align black-text" style="padding-top:7%;">
+					@CareerClass.id
+				  </div>
+				</div>
             </div></a>
-            <a href="#yt"><div class="row">
-              <div class="col l4 m3 s4">
-                <img src="<?php echo base_url();?>assets/img/youtube.png" width="100%">
-              </div>
-              <div class="col l8 m9 s8 left-align black-text" style="padding-top:7%;">
-                CareerClass
-              </div>
+            <a href="#yt"><div class="row" style="margin-top:-20px;">
+				<div class="col 12 m12 s6">
+				  <div class="col 12 m6 s4">
+					<img src="<?php echo base_url();?>assets/img/youtube.png" width="100%">
+				  </div>
+				  <div class="col 12 m6 s8 left-align black-text" style="padding-top:7%;">
+					CareerClass
+				  </div>
+				</div>
             </div></a>
-            <a href="#ln"><div class="row">
-              <div class="col l4 m3 s4">
-                <img src="<?php echo base_url();?>assets/img/line.png" width="100%">
-              </div>
-              <div class="col l8 m9 s8 left-align black-text" style="padding-top:7%;">
-                @CareerClass.id
-              </div>
+            <a href="#ln"><div class="row" style="margin-top:-20px;">
+				<div class="col 12 m12 s6" >
+				  <div class="col 12 m6 s4">
+					<img src="<?php echo base_url();?>assets/img/line.png" width="100%">
+				  </div>
+				  <div class="col 12 m6 s8 left-align black-text" style="padding-top:7%;">
+					@CareerClass.id
+				  </div>
+				</div>
             </div></a>
           </div>
-          <div class="col l1 m1 s1"></div>
-          <div class="col l9 m8 s7">
+          <div class="col l1 m1 s0"></div>
+          <div class="col l9 m8 s12">
             <div class="row">
             <form>
               <div class="input-field col l12 m12 s12 left-align">
                 <input id="name" name="name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
+                <label for="last_name">Name</label>
               </div>
               <div class="input-field col l12 m12 s12 left-align">
                 <input id="email" name="email" type="email" class="validate">

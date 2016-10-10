@@ -11,7 +11,7 @@ class BlogModel extends CI_Model
 
 	public function getBlogPosts($limit,$offset){
 		
-		$query = $this->db->query("SELECT * FROM post LIMIT ".$offset.",".$limit."");
+		$query = $this->db->query("SELECT * FROM  post ORDER BY id DESC LIMIT ".$offset.",".$limit."");
 		return $query->result();
 	}
 	

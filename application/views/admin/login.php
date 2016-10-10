@@ -4,14 +4,7 @@
 
 
 <head>
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>assets/css/materialize.min.css"  media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>assets/css/custom.css"  media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>assets/css/admin.css"  media="screen,projection"/>
-
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<?php echo $header ?>
   
 </head>
 
@@ -30,7 +23,7 @@
     <div class="col s12 z-depth-4 card-panel">
         <div class="row">
           <div class="input-field col s12 center">
-            <img src="<?php echo base_url()?>assets/img/logo samping.png" style="width:50%">
+            <img src="<?php echo base_url()?>assets/img/logo_samping.png" style="width:50%">
             <p class="center login-form-text">Admin Login</p>
           </div>
         </div>

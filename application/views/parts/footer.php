@@ -3,7 +3,7 @@
       <div class="row">
         <a href="<?php echo base_url();?>">
 	        <div class="col s12 center">
-	          <img src="<?php echo base_url()?>assets/img/logo_putih.png" style="width:20%">
+	          <img class="footer-img" src="<?php echo base_url()?>assets/img/logo_putih.png" >
 	        </div>
         </a>
       </div>

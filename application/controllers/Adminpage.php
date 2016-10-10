@@ -37,6 +37,7 @@ class Adminpage extends CI_Controller {
 			redirect('Adminpage/loginPage');
 		}
 		
+		$data['header']=$this->load->view('admin/header','',true);
 		$data['navbar']=$this->load->view('admin/navbar','',true);
 		$this->load->view('admin/index',$data);
 	}
@@ -77,16 +78,16 @@ class Adminpage extends CI_Controller {
 			$new_name.= $img_data['file_ext'];
         } 
 		
-		if($banner=='on') $banner = 1;
-		else $banner = 0;
-		
+		if($flag==0)
+		{
+			$new_name='default.png';
+		}
 		$data = array(
 		'title' => $title,
 		'title_slug' => $slug,
 		'content' => $content,
 		'content_text' => $content_text,
-		'img' => $new_name,
-		'banner' => $banner
+		'img' => $new_name
 		);
 		
 		$report = $this->PostModel -> addPost($data);
@@ -97,6 +98,7 @@ class Adminpage extends CI_Controller {
 	
 	public function post_manager()
 	{
+		$data['header']=$this->load->view('admin/header','',true);
 		$data['navbar']=$this->load->view('admin/navbar','',true);
 		$data['posts'] = $this->PostModel -> getAllPost();
 		$this->load->view('admin/post_manager',$data);
@@ -104,6 +106,7 @@ class Adminpage extends CI_Controller {
 	
 	public function post_editor($id)
 	{
+		$data['header']=$this->load->view('admin/header','',true);
 		$data['navbar']=$this->load->view('admin/navbar','',true);
 		$data['post'] = $this->PostModel -> getPost($id);
 		$this->load->view('admin/post_editor',$data);
@@ -111,13 +114,13 @@ class Adminpage extends CI_Controller {
 	
 	public function updatePost($id)
 	{
+		$data['header']=$this->load->view('admin/header','',true);
 		$content = $this->input->post('content_post');
 		$content_text = $this->input->post('content_text');
 		$title = $this->input->post('title_post');
 		$string = strtolower($title);
 		$slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
 		
-		$banner = $this->input->post('banner_show');
 		$config['upload_path']   = './assets/img/post/';
 		$new_name = $id;
 		$new_name.= '_';
@@ -158,8 +161,7 @@ class Adminpage extends CI_Controller {
 		'content' => $content,
 		'content_text' => $content_text,
 		'img' => $new_name,
-		'id' => $id,
-		'banner' => $banner
+		'id' => $id
 		);
 		
 		$report = $this->PostModel -> updatePost($data);
@@ -170,6 +172,7 @@ class Adminpage extends CI_Controller {
 	
 	public function deletePost($id)
 	{
+		$data['header']=$this->load->view('admin/header','',true);
 		$report = $this->PostModel -> deletePost($id);
 		$this->session->set_flashdata('message', 'Post Berhasil Dihapus');
 		redirect('adminpage/post_manager');
@@ -177,7 +180,8 @@ class Adminpage extends CI_Controller {
 	
 	public function loginPage(){
 		
-		$this->load->view('admin/login');
+		$data['header']=$this->load->view('admin/header','',true);
+		$this->load->view('admin/login',$data);
 	}
 	
 	public function doLogin()
