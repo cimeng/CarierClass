@@ -34,8 +34,9 @@ class Cvcoaching extends CI_Controller {
 		$this->load->library('session');
 		
 		$name=$this->input->post('name');
-		
-		$name = ucwords($name);
+		$email=$this->input->post('email');
+		$major=$this->input->post('major');
+		$univ=$this->input->post('univ');
 		
 		$string = strtolower($name);
 		$slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
@@ -73,25 +74,32 @@ class Cvcoaching extends CI_Controller {
 		}
 		$email_config = Array(
             'protocol'  => 'smtp',
-            'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_port' => '465',
-            'smtp_user' => 'kevinfachreza009@gmail.com',
-            'smtp_pass' => '15log15=1',
+            'smtp_host' => 'mail.careerclass.id',
+            'smtp_port' => '587',
+            'smtp_user' => 'admin@careerclass.id',
+            'smtp_pass' => 'qwerty1234',
             'mailtype'  => 'html',
             'starttls'  => true,
             'newline'   => "\r\n"
         );
 		
 		$this->load->library('email', $email_config);
-		$this->email->from('kevinfachreza009@gmail.com', 'Kevin');
-		$this->email->to('dapatbuku1@gmail.com');
+		$this->email->from('cvcoaching@careerclass.id', 'Careerclass');
+		$this->email->to('kevinfachreza009@gmail.com');
 		for($i=0; $i<$cpt; $i++)
 		{
 			$this->email->attach($img_cv[$i]);
 			//echo $img_cv[$i].'<br>';
 		}
-		$this->email->subject('Email Test');
-		$this->email->message('Testing the email class.');
+		
+		$subject = 'CVCoaching-'.$name.'-'.$univ.'-'.$major;
+		$message = 
+			'Nama : '.$name.'<br>
+			Email : '.$email.'<br>
+			Universitas : '.$univ.'<br>
+			Jurusan : '.$major;
+		$this->email->subject($subject);
+		$this->email->message($message);
 
 		if($this->email->send()){
 			$this->session->set_flashdata('message', 'File Kamu Telah Terkirim');

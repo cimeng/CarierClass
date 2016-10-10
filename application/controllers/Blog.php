@@ -44,7 +44,8 @@ class Blog extends CI_Controller {
 	
 	public function post($name)
 	{
-		$name='aa';
+		if($name==NULL) redirect('blog');
+		$data['post'] = $this->BlogModel->getPost($name);
 		$data['header']=$this->load->view('parts/header','',true);
 		$data['navbar']=$this->load->view('parts/navbar','',true);
 		$data['footer']=$this->load->view('parts/footer','',true);

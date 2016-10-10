@@ -50,7 +50,7 @@
           <?php foreach ($post as $data) { ?>
           <div class="col s6 m3 l3 left" >
             <div>
-              <div><img src="<?php echo base_url();?>assets/img/post/<?php echo $data->img?>" width="100%"></div>
+              <div style="height:200px;"><img src="<?php echo base_url();?>assets/img/post/<?php echo $data->img?>" style="height:200px;;max-width:100%;object-fit: cover"></div>
 			  <div style="font-size:1.2em;font-weight:bold"><?php echo $data->title ?></div>
               <p style="text-align:center"><?php echo $data->content_text ?></p>
 			</div>
@@ -154,7 +154,14 @@
           <div class="col l1 m1 s0"></div>
           <div class="col l9 m8 s12">
             <div class="row">
-            <form>
+			<?php if($this->session->flashdata('message')!=NULL){ ?>
+		<div class="row">
+			<div class="col s12 m12 l12 blue darken-4 white-text">
+				  <h6><?php echo $this->session->flashdata('message') ?></h6>
+			</div>
+		</div>
+		<?php } ?>
+			<?php echo form_open_multipart('Home/sendContact');?>
               <div class="input-field col l12 m12 s12 left-align">
                 <input id="name" name="name" type="text" class="validate">
                 <label for="last_name">Name</label>
@@ -169,9 +176,11 @@
               </div>
               <div class="input-field col s12 m12 s12 left-align">
                 <textarea id="isi" name="isi" class="materialize-textarea"></textarea>
-                <label for="textarea1">Textarea</label>
+                <label for="textarea1">Message</label>
               </div>
-
+				<div class="input-field col s12 center">
+				  <input id="first_name" type="submit" class="waves-effect waves-light btn blue darken-4">
+				</div>
               <script type="text/javascript">
                   $(document).ready(function() {
                     Materialize.updateTextFields();

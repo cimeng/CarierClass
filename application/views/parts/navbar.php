@@ -25,7 +25,7 @@
 								chat
 							</div>
 					</a>
-					<a id="coaching" href="<?php echo base_url()?>cvcoaching" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:1em;">
+					<a href="<?php echo base_url()?>cvcoaching" class="col l2 m2 s2" style="padding-top:24px; padding-bottom:40px;  text-align:center; font-size:1em;">
 							<div style="color: #fbb515;">
 								coaching
 							</div>

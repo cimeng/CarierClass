@@ -21,9 +21,9 @@
 			<div class="row">
 				<?php foreach ($post as $rows) { ?>
 				<div class="col s6 m4 l3 blog-container">
-					<div class="blog-img">
-						<a href="#">
-							<img src="<?php echo base_url() ?>assets/img/Orang.png" style="width:100%">
+					<div class="blog-img" style="height:200px;">
+						<a href="<?php echo base_url()?>blog/post/<?php echo $rows->title_slug?>">
+							<img src="<?php echo base_url() ?>assets/img/post/<?php echo $rows->img?>" style="height:200px;;max-width:100%;object-fit: cover">
 						</a>
 					</div>
 					<div class="blog-title">

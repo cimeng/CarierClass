@@ -20,6 +20,12 @@ class BlogModel extends CI_Model
 		$query = $this->db->query("SELECT 1 FROM post");
 		return $query->result();
 	}
+	
+	public function getPost($slug){
+		
+		$query = $this->db->query("SELECT * FROM post WHERE title_slug = '".$slug."'");
+		return $query->result();
+	}
 
 
 }
