@@ -66,7 +66,7 @@ class Home extends CI_Controller {
 		
 		$this->load->library('email', $email_config);
 		$this->email->from('admin@careerclass.id', 'Careerclass');
-		$this->email->to('kevinfachreza009@gmail.com');
+		$this->email->to('alianooranoviar@gmail.com');
 		
 		$subject = 'ContactUs-'.$subject;
 		$message = 

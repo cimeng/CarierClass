@@ -52,7 +52,7 @@
             <div>
               <div style="height:200px;"><img src="<?php echo base_url();?>assets/img/post/<?php echo $data->img?>" style="height:200px;;max-width:100%;object-fit: cover"></div>
 			  <div style="font-size:1.2em;font-weight:bold"><?php echo $data->title ?></div>
-              <p style="text-align:center"><?php echo $data->content_text ?></p>
+              <p style="text-align:center"><?php echo substr( $data->content_text, 0, strrpos( substr( $data->content_text, 0, 150), ' ' ) ); ?>...</p>
 			</div>
           </div>
           <?php

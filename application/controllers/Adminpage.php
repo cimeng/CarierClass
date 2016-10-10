@@ -43,6 +43,7 @@ class Adminpage extends CI_Controller {
 	}
 	public function getData()
 	{
+		$flag=1;
 		$id = $this->PostModel -> getLastPost();
 		$id = $id+1;
 		$banner = $this->input->post('banner_show');

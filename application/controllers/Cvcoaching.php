@@ -85,7 +85,7 @@ class Cvcoaching extends CI_Controller {
 		
 		$this->load->library('email', $email_config);
 		$this->email->from('cvcoaching@careerclass.id', 'Careerclass');
-		$this->email->to('kevinfachreza009@gmail.com');
+		$this->email->to('alianooranoviar@gmail.com');
 		for($i=0; $i<$cpt; $i++)
 		{
 			$this->email->attach($img_cv[$i]);

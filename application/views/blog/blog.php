@@ -31,6 +31,7 @@
 							<?php echo $rows->title ?>
 						</a>
 					</div>
+					<p style="text-align:center"><?php echo substr( $rows->content_text, 0, strrpos( substr( $rows->content_text, 0, 150), ' ' ) ); ?>...</p>
 				</div>
 				<?php } ?>
 			</div>
