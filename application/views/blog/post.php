@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Starter Template - Materialize</title>
+	<title> CareerClass.id - <?php echo $post[0]->title?> </title>
 	<?php echo $header ?>
 	<link href="<?php echo base_url()?>assets/css/blog.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 </head>
 <body>
 
@@ -16,7 +17,9 @@
 				<hr>
 			</div>
 				<div class="row center">
+				<?php if (strcmp($rows->img,"default.png") != 0){?>
 					<img src="<?php echo base_url() ?>assets/img/post/<?php echo $rows->img?>" >
+				<?php } ?>
 				</div>
 				<div class="row center">
 					<h5 class=" col s12 light"><?php echo $rows->content?></h5>

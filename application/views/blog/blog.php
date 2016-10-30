@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Starter Template - Materialize</title>
 	<?php echo $header ?>
 	<link href="<?php echo base_url()?>assets/css/blog.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<title> CareerClass.id </title>
 </head>
 <body>
 
@@ -14,7 +14,11 @@
 		<div id="header">
 			<h1 class="header center black-text">Career Story</h1>
 			<div class="row center">
-				<h5 class="header col s12 light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </h5>
+				<h5 class="header col s12 light">
+				Kumpulan Artikel dan Tips & Trick bermanfaat untuk mempersiapkan karir masa depan kamu. Career Story akan membuka pengetahuan kamu bagaimana langkah menata karir kamu, dimulai dari persiapan apa saja yang harus kamu lakukan saat kuliah dan bagaimana cara membuat CV yang tepat.
+				<br><br>
+				Yuk baca Artikel dan Tips & Trick Career Story dibawah ini!
+				</h5>
 			</div>
 		</div>
 		<div id="blog">
@@ -26,9 +30,9 @@
 							<img src="<?php echo base_url() ?>assets/img/post/<?php echo $rows->img?>" style="height:200px;;max-width:100%;object-fit: cover">
 						</a>
 					</div>
-					<div class="blog-title">
-						<a href="#">
-							<?php echo $rows->title ?>
+					<div class="blog-title" style="text-align:center;">
+						<a href="<?php echo base_url()?>blog/post/<?php echo $rows->title_slug ?>">
+							<h6 style="font-weight:bold"><?php echo $rows->title ?></h6>
 						</a>
 					</div>
 					<p style="text-align:center"><?php echo substr( $rows->content_text, 0, strrpos( substr( $rows->content_text, 0, 150), ' ' ) ); ?>...</p>

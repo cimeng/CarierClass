@@ -41,14 +41,19 @@ class Adminpage extends CI_Controller {
 		$data['navbar']=$this->load->view('admin/navbar','',true);
 		$this->load->view('admin/index',$data);
 	}
+	
+	function get_mysqli() { 
+	$db = (array)get_instance()->db;
+	return mysqli_connect($db['hostname'], $db['username'], $db['password'], $db['database']);
+	}
+
 	public function getData()
 	{
 		$flag=1;
 		$id = $this->PostModel -> getLastPost();
 		$id = $id+1;
-		$banner = $this->input->post('banner_show');
-		$content = $this->input->post('content_post');
-		$content_text = $this->input->post('content_text');
+		$content = $this->db->escape_str($this->input->post('content_post'));
+		$content_text = $this->db->escape_str($this->input->post('content_text'));
 		$title = $this->input->post('title_post');
 		
 		$string = strtolower($title);
@@ -116,8 +121,8 @@ class Adminpage extends CI_Controller {
 	public function updatePost($id)
 	{
 		$data['header']=$this->load->view('admin/header','',true);
-		$content = $this->input->post('content_post');
-		$content_text = $this->input->post('content_text');
+		$content = $this->db->escape_str($this->input->post('content_post'));
+		$content_text = $this->db->escape_str($this->input->post('content_text'));
 		$title = $this->input->post('title_post');
 		$string = strtolower($title);
 		$slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
@@ -154,8 +159,6 @@ class Adminpage extends CI_Controller {
 				$_SESSION['img']
 			);
 		}
-		if($banner=='on') $banner = 1;
-		else $banner = 0;
 		$data = array(
 		'title' => $title,
 		'title_slug' => $slug,

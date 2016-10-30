@@ -171,3 +171,60 @@ div.relative {
    h3 { font-size: 7em; }
 
 }
+
+
+.about-circle-text{
+	position: relative; 
+	left: 0; 
+	width: 100%; 
+}
+
+.card .card-image .card-title {
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  padding-top:30%;
+  font-size:1.4vw;
+}
+
+.card-story
+{
+	font-size:1.2vw;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+	.card .card-image .card-title {
+		padding-top:25%;
+		font-size:1.5vw;
+	}
+	
+	.card-story
+	{
+		font-size:1.3vw;
+	}
+	.card-chat
+	{
+		font-size:1.3vw;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	.card .card-image .card-title {
+		padding-top:25%;
+		font-size:3.3vw;
+	}
+	
+	.card-story
+	{
+		font-size:1.5vw;
+	}
+	.card-chat
+	{
+		font-size:2.5vw;
+	}
+
+
+}

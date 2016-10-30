@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Starter Template - Materialize</title>
 	<?php echo $header ?>
 	<link href="<?php echo base_url()?>assets/css/cv.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<title> CareerClass.id </title>
 </head>
 <body>
 
@@ -19,8 +19,10 @@
 		</div>
 	</div>
 	<div id="cv-paragraph" class="container center">
-		<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-		</h5>
+		<h5>Masih bingung bagaimana cara membuat CV yang benar? Atau belum percaya diri dengan isi dari CV kamu? <br><br>
+	Cukup upload CV kamu di CV Coacing Career Class dan dapatkan feedback positif dari Dokter Karir!<br><br>
+	Pasti kamu lebih percaya diri dengan CV baru kamu!<br><br>
+	</h5>
 	</div>
 	<div id ="cv-form" class="container row">
 		<?php if($this->session->flashdata('message')!=NULL){ ?>
